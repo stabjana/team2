@@ -1,3 +1,0 @@
-# Testing
-
-## Task 3
