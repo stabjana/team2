@@ -4,17 +4,25 @@
 
 Objective: Develop a small, interactive browser game where users navigate a map with clickable items that trigger different actions (e.g., solving text riddles, drag-and-drop items, etc.). Host it on GitHub.
 
-## 2. Technical Stack
+## 2. Technical Stack (what tech will you use?)
 
-- Frontend: React (with React Router for navigation)
-- Backend: Node.js with Express
-- Database: PostgreSQL
-- Art Design: Have no idea <!-- hope the team will help with it -->
+- Managing git and branches (version control): **GirHub**;
+- Project management: **Trello**;
+- Prototyping and creating UX/UI: **Figma**;
+- Frontend: _React_;
+- Backend: **Node.js with Express**;
+- Database: **MariaBD**;
+- Art Design: **???** <!-- I think that Saara can suggest something -->
 - Additional Libraries (optional):
-  - Axios for API calls (obviously there are APIs with riddles);
-  - Passport.js for authentication;
-  - React DnD for drag-and-drop functionality;
-  - Possibly a CSS framework.
+  - **Axios** for API calls (obviously there are APIs with riddles);
+  - **Passport.js** for authentication;
+  - **ReactPlayer** for background music;
+  - **Some CSS framework**.<!-- Ask Margit on Wednesday -->
+- External APIs:
+  - Background music API: **https://audiomack.com/data-api/docs**;
+  - "Historic facts" API: **???** <!-- Stefanie will look for some -->
+- Communication: **MS Teams**;
+- Presentations: **MS PowerPoint**.
 
 ## 3. Functional Requirements
 
