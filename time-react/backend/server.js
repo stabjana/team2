@@ -1,26 +1,34 @@
 'use strict'
 
-const http = require('http');
-const url = require('url');
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
-const port = 5000;
-
-const { //all functions here
-
-} = require('./functionLibrary.js');
-
-const requestHandler = (req, res) => {
-    const parsedUrl = url.parse(req.url, true);
-    const { pathname } = parsedUrl;
+const app = express();//start Express app
 
 
 
+// middleware
+app.use(express.json()); // Parses JSON bodies
+app.use(cors());// enables cross-origin requests
+
+// API routes
+const apiRoutes = require('./backend/routes'); // import routes
+app.use('/api', apiRoutes);
 
 
-    res.end();
+// serve frontend in production (GPT suggested it, don't quite understand)
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
+
+    // serve index.html for all other routes to support client-side routing
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'frontend', 'dist', 'index.html'));
+    });
 }
 
-const server = http.createServer(requestHandler);
-server.listen(port, () => console.log(`Server is running on ${port}`));
+// set the port
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
