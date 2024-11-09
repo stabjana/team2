@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mariadb": "^3.4.0"
+  }
+}
