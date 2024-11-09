@@ -1,12 +1,13 @@
 const mariadb = require('mariadb'); //if we are still going to use MariaDB
+require('dotenv').config();
 
 // Create a connection pool
 const pool = mariadb.createPool({
-    host: process.env.DB_HOST || 'localhost',//correct later
-    user: process.env.DB_USER || 'root',//correct later
-    password: process.env.DB_PASSWORD || 'yourpassword',//password for players. Correct later
-    database: process.env.DB_NAME || 'your_database',//name of the database. Correct later
-    connectionLimit: 5
+    host: process.env.DB_HOST || 'localhost', // Database host
+    user: process.env.DB_USER,                // User from environment variables
+    password: process.env.DB_PASSWORD,        // Password from environment variables
+    database: process.env.DB_NAME,            // Database name from environment variables
+    connectionLimit: 5                        // Connection limit
 });
 
 //getting DB a connection
