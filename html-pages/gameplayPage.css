@@ -3,26 +3,41 @@
     padding: 0;
     box-sizing: border-box;
     overscroll-behavior: none;
-    font-size: 16px;
 }
 
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
+    font-family: 'Righteous', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1rem 4rem;
 }
 
 header {
     display: flex;
-    padding: .5rem;
+    padding: 1rem;
     height: 100px;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
-    background-color: #d3d3d3;
+    justify-content: flex-start;
+    background-color: #fefffa;
 }
 
-nav ul {
+#logo img {
+    height: 90px;
+}
+
+header h1 {
+    font-family: 'Paytone One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 65px;
+    -webkit-text-fill-color: #F7FF66;
+    -webkit-text-stroke-color: #5C48BC;
+    -webkit-text-stroke-width: 0.2pt;
+    margin: 0 4rem;
+}
+
+/*nav ul {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -30,7 +45,7 @@ nav ul {
 
 nav ul li {
     margin: 0 1rem;
-}
+}*/
 
 main {
     display: flex;
@@ -39,16 +54,18 @@ main {
     width: 100%;
     height: 100%;
     align-items: center;
-    background-color: #fff3f3;
+    background-color: #fefffa;
+    font-family: 'Righteous','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #5C48BC;
 }
 
 .boxForGameplayAndMenu{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: 2rem;
     width: 100%;
     height: 100%;
-    background-color: #d3d3d3;
 }
 
 .boxForGameplay{
@@ -57,14 +74,32 @@ main {
     flex-wrap: nowrap;
     width: 80%;
     height: 100%;
+    position: relative;
+    /*background-image: url("playboard1.png");
+    object-fit: contain;*/
+    z-index: 1
 }
 
-.playBoard {
+.playboard-img {
+    flex: 1;
+    position: absolute;
+    max-height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: #8168FE 2px solid;
+    z-index: 1;
+    /*opacity: 50%;*/
+    object-fit: cover;     
+}
+
+.playboard-grid {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: .1rem;
     height: 100%;
-  }
+    z-index: 0;
+  }*/
   
 .field {
     display: flex;
@@ -75,26 +110,61 @@ main {
     font-size: 1.5rem;
 }
 
-.itemList{
+.itemList {
     display: flex;
     flex-direction: row;
-    background-color: #b3b3b3;
+    background-color: #d9f9cf;
 }
 
-.item{
-    background-color: #f5f5f5;
-    margin: .1rem;
-    padding: .2rem;
+.item {
+    background-color: #d9f9cf;
+    margin: .5rem;
+    padding: 1rem;
+    border-left: #5C48BC 1px solid;
+    border-right: #5C48BC 1px solid;
 }
 
 .boxForMenu{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;
     width: 20%;
     height: 100%;
-    background-color: #b3b3b3;
-    margin: 0 .1rem;
+    background-color:#BBBBFF;
+    border-radius: 5px;
+    border: #8168FE 2px solid;
+    /*margin: 0 .1rem;*/
+    padding: 1.5rem;
+}
+
+.user img {
+    width: 130px;
+    padding: 1rem 1.5rem 0 1rem;
+    background-color: #fefffa; 
+    border-radius: 5px;
+    border: #8168FE 2px solid;
+    
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: #5C48BC;
+    background-color: #F9FF87;
+    border: #EAF700 2px solid;
+    border-radius: 15px;
+    width: 80%;
+    align-self: center;
+    height: 2rem;
+    margin: 1rem 0;
+    padding: 0.2rem 0.5rem;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.22);
+}
+
+#settings img {
+    width: 50px;
+    margin-top: 0.5rem;
 }
 
 .boxForSound{
@@ -105,8 +175,9 @@ main {
 footer {
     display: flex;
     padding: .5rem;
-    height: 100px;
+    /*height: 100px;*/
     width: 100%;
     align-self: flex-end;
-    background-color: #d3d3d3;
+    background-color:  #fefffa;
+    font-size: 10px;
 }

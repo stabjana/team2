@@ -7,29 +7,38 @@
     <meta name="author" content="timeShifters">
     <meta name="description" content="This project has been done as an assignment fot Software Development team Project classes">
     <link rel="stylesheet" href="./gameplayPage.css">
+    <link href="assets/favicon.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Righteous&display=swap" rel="stylesheet">
+
     <title>Gameplay Page</title>
 </head>
 
 <body>
     <header>
-        <div>Logo</div>
-        <nav>
+        <div id="logo">
+            <img src="assets/logo.svg" alt="TimeLink-game logo">
+        </div>
+        <h1>TimeLink</h1>
+        <!--<nav>
             <ul>   
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
                 <li><a href="#">Link 4</a></li>
             </ul>
-        </nav>
+        </nav>-->
     </header>
 
     <main>
-        <div class="boxForTitle">
+        <!--<div class="boxForTitle">
             <h1>Time Link</h1>
-        </div>
+        </div>-->
         <div class="boxForGameplayAndMenu">
             <div class="boxForGameplay">
-                <div class="playBoard" id="playBoard">
+                <div class="playboard-img">
+                    <img src="assets/playboard1.png" alt="game playboard">
+                </div>
+                <div class="playboard-grid" id="playboard-grid">
                     <div id="p1" class="field">1</div>
                     <div id="p2" class="field">2</div>
                     <div id="p3" class="field">3</div>
@@ -65,7 +74,7 @@
             </div>
             <aside class="boxForMenu">
                 <div id="user" class="user">
-                    <img src="USERPICTURE" alt="little Alien">
+                    <img src="assets/userpic.svg" alt="little Alien">
                     <h3 id="userName">Username</h3>
                 </div>
 
@@ -78,7 +87,12 @@
                 </div>
                 <button id="nextRiddle">Play next</button>
                 <button id="exit">Save & Exit</button>
-                <button id="settings">gearwheel</button>
+                <!--<button id="settings">gearwheel</button>-->
+                <div id="settings">
+                    <a href="#">
+                        <img src="assets/icons8-settings.svg" alt="">
+                    </a>
+                </div>
             </aside>
         </div>
     </main>
