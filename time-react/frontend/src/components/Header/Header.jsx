@@ -1,17 +1,13 @@
-import '../styles/Header.css'
+import './Header.css'
+import logo from '../../assets/logo.svg';
 
 function Header() {
     return (
         <header>
-            <div>Logo</div>
-            <nav>
-                <ul>   
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                </ul>  
-            </nav>
+            <div id="logo">
+                <img src={logo} alt="TimeLink-game logo"/>
+            </div>
+            <h1>TimeLink</h1>
         </header>
     );
 }

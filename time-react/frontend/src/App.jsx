@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <Header/>
-      {isLoggedIn ? <gameplayPage/> : <loginPage/>}
+    <Gameplay/>
     <Footer/>
   </>
   )
