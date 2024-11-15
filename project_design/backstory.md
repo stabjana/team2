@@ -62,6 +62,8 @@ https://en.wikipedia.org/wiki/Cenozoic
 The Paleolithic or Palaeolithic, also called the Old Stone Age, is a period in human prehistory that is distinguished by the original development of stone tools, and which represents almost the entire period of human prehistoric technology.
 First Art appears example: Cave of Altamira, Northern Spain
 
+Item: Spear thrower
+
 https://en.wikipedia.org/wiki/Paleolithic
 
 ### Mesolithic
@@ -122,10 +124,50 @@ he political history of the western Roman empire was brought to a dramatic end i
 
 https://en.wikipedia.org/wiki/Human_history#Ancient_history
 
-### Goths, Vandals, Franks, Anglo-Saxons, and others
+## Pythagoras of Samos
 
-### Vikink age (early middle ages)
+570-479 BC
+Pythagorean theorem
 
-### Middle ages
+## Han Dynasty (202 BC – 9 AD, 25–220 AD)
 
-###
+The first compasses in ancient Han dynasty China were made of lodestone, a naturally magnetized ore of iron.[2][10] The wet compass reached Southern India in the 4th century AD.[11][12] Later compasses were made of iron needles, magnetized by striking them with a lodestone, which appeared in China by 1088 during the Song dynasty, as described by Shen Kuo.[13] Dry compasses began to appear around 1300 in Medieval Europe and the Islamic world.[14][7] This was supplanted in the early 20th century by the liquid-filled magnetic compass.[15]
+
+https://en.wikipedia.org/wiki/Compass
+
+### 14th century
+
+It is estimated that the century witnessed the death of more than 45 million lives from political and natural disasters in both Europe and the Mongol Empire.[1][2] West Africa experienced economic growth and prosperity.
+
+In Europe, the Black Death claimed 25 million lives – wiping out one third of the European population.
+King Charles IV of France led to a claim to the French throne by King Edward III of England. This period is considered the height of chivalry and marks the beginning of strong separate identities for both England and France as well as the foundation of the Italian Renaissance and the Ottoman Empire.
+
+In the Arab world, historian and political scientist Ibn Khaldun and explorer Ibn Battuta made significant contributions. In India, the Bengal Sultanate separated from the Delhi Sultanate, a major trading nation in the world.
+In Africa, the wealthy Mali Empire, a huge producer of gold, reached its territorial and economic height under the reign of Mansa Musa I of Mali, the wealthiest individual of medieval times, and perhaps the wealthiest ever.[5][6]
+
+In the Americas, the Mexica founded the city of Tenochtitlan, while the Mississippian mound city of Cahokia was abandoned.
+
+Inventions:
+Foundation of the University of Kraków
+Chinese text the Huolongjing by Jiao Yu describes fire lances, fire arrows, rocket launchers, land mines, naval mines, bombards, cannons, and hollow cast iron cannonballs filled with gunpowder, and their use to set ablaze enemy camps
+First pound lock in Europe reportedly built in Vreeswijk, Netherlands in 1373
+
+https://en.wikipedia.org/wiki/14th_century
+
+### 15th century: Renaissance affects philosophy, science and art.
+
+inventions:
+Public banks.
+Scotch Whiskey
+
+### 16th century
+
+1593: Galileo Galilei invents a thermometer.
+1543: Copernicus publishes his theory that the Earth and the other planets revolve around the Sun
+
+### Barock - time and before
+
+Microscope:
+Although objects resembling lenses date back 4,000 years and there are Greek accounts of the optical properties of water-filled spheres (5th century BC) followed by many centuries of writings on optics, the earliest known use of simple microscopes (magnifying glasses) dates back to the widespread use of lenses in eyeglasses in the 13th century.[2][3][4] The earliest known examples of compound microscopes, which combine an objective lens near the specimen with an eyepiece to view a real image, appeared in Europe around 1620.[5] The inventor is unknown, even though many claims have been made over the years.
+
+https://en.wikipedia.org/wiki/Microscope
