@@ -5,49 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="timeShifters">
-    <meta name="description" content="This project has been done as an assignment fot Software Development team Project classes">
+    <meta name="description" content="This project has been done as an assignment for Software Development team Project classes">
     <link rel="stylesheet" href="./loginPage.css">
+    <link href="assets/favicon.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Righteous&display=swap" rel="stylesheet">
+
+
     <title>Login Page</title>
 </head>
 
 <body>
     <header>
-        <div>Logo</div>
-        <nav>
+        <div id="logo">
+            <img src="assets/logo.svg" alt="TimeLink-game logo">
+        </div>
+        <h1>TimeLink</h1>
+        <!--<nav>
             <ul>   
                 <li><a href="#">Link 1</a></li>
                 <li><a href="#">Link 2</a></li>
                 <li><a href="#">Link 3</a></li>
                 <li><a href="#">Link 4</a></li>
             </ul>  
-        </nav>
+        </nav>-->
     </header>
 
     <main>
         <!-- login-section start -->
         <div id="logWindow" class="loginWindow"> <!-- some or all can definetly be replaced by conditional rendering -->
             <div class="withAccount">
+                <h2>Log In</h2>
                 <label for="username">Username: </label>
                 <input type="text" id="username" name="username">
 
                 <label for="password">Password: </label>
                 <input type="password" id="password" name="password">
-                <button>Log in/ Log out</button>
-                <a href="#">Forgot your password?</a>
+                <button>Login</button>
+                <a href="#">Forgot your password?</a><br>
+                <a href="#">Not a player yet? Sign up here to create an account and save your progress.</a>
             </div>
-
-            <div class="noAccount">
-                <p> Sign up here, to save your progress.</p>
-                <label for="newUsername">Username:</label>
-                <input type="text" id="newUsername" name="newUsername">
-
-                <label for="newPassword">Password:</label>
-                <input type="password" id="newPassword" name="newPassword">
-                <button>Sign up</button>
-            </div>
-
             <div class="guestAccount">
-                <p>Or play a quick session as guest</p>
+                <h2>Play a quick session as guest</h2>
                 <button>Play as guest</button>
             </div>
             
