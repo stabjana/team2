@@ -1,6 +1,6 @@
-import '../styles/loginPage.css'
+import './Login.css'
 
-function LoginPage() {
+function Login() {
     return (
         <div>
             <main>
@@ -36,4 +36,4 @@ function LoginPage() {
     );
 };
 
-export default LoginPage;
+export default Login;
