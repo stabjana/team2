@@ -1,5 +1,5 @@
 import './Footer.css'
-import currentYear from ('../../utilits/currentYear')
+import currentYear from '../../../src/utilits/currentYear'
 
 
 function Footer(){
