@@ -1,6 +1,6 @@
 import './Gameplay.css'
 
-function gamePlayPage(){
+function Gameplay(){
     return(
         <main>
             <div class="boxForTitle">
@@ -72,4 +72,4 @@ function gamePlayPage(){
     )
 }
 
-export default gamePlayPage;
+export default Gameplay;
