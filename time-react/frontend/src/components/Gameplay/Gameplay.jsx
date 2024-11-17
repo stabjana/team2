@@ -1,6 +1,7 @@
 import './Gameplay.css'
+import Button from '../Button/Button'
 
-function Gameplay(){
+function Gameplay({ onLogOut }){
     return(
         <main>
             <div class="boxForTitle">
@@ -59,7 +60,12 @@ function Gameplay(){
                         <p>Player here</p>
                     </div>
                     <button id="nextRiddle">Play next</button>
-                    <button id="exit">Save & Exit</button>
+                    <Button
+                            text='Exit'
+                            onClick={onLogOut}
+                            data-role="primary"
+                            type="button"
+                    />
                     {/* <button id="settings">gearwheel</button> */}
                     <div id="settings">
                         <a href="#">

@@ -8,16 +8,24 @@ import './App.css'
 
 function App() {
   const [isLoggedIn, setLogIn] = useState(false);
+
   const handleLogIn = () => {
-    setLogIn(!isLoggedIn);
+    setLogIn(true); // explicitly set to true for login
+  };
+
+  const handleLogOut = () => {
+    setLogIn(false); // explicitly set to false for logout
   };
 
   
   return (
     <>
       <Header/>
-      <button onClick={handleLogIn}>{isLoggedIn ? 'Log out' : 'Log in'}</button>
-      {isLoggedIn ? <Gameplay/> : <Login/>}
+      {isLoggedIn ? (
+        <Gameplay onLogOut={handleLogOut} />
+      ) : (
+        <Login onLogIn={handleLogIn} />
+      )}
       <Footer/>
     </>
   )

@@ -1,33 +1,50 @@
 import './Login.css'
+import Button from '../Button/Button';
 
-function Login() {
+function Login({ onLogIn }) {
     return (
         <div>
             <main>
-                <div id="logWindow" class="loginWindow">
-                    <div class="withAccount">
-                        <label for="username">Username: </label>
+                <div id="logWindow" className="loginWindow">
+                    <div className="withAccount">
+                        <label htmlFor="username">Username: </label>
                         <input type="text" id="username" name="username"/>
 
-                        <label for="password">Password: </label>
+                        <label htmlFor="password">Password: </label>
                         <input type="password" id="password" name="password"/>
-                        <button>Log in/ Log out</button>
+                        <Button
+                            text='Log in'
+                            onClick={onLogIn}
+                            data-role="primary"
+                            type="button"
+                        />
+                        <br />
                         <a href="#">Forgot your password?</a>
                     </div>
 
-                    <div class="noAccount">
+                    <div className="noAccount">
                         <p> Sign up here, to save your progress.</p>
-                        <label for="newUsername">Username:</label>
+                        <label htmlFor="newUsername">Username:</label>
                         <input type="text" id="newUsername" name="newUsername"/>
 
-                        <label for="newPassword">Password:</label>
+                        <label htmlFor="newPassword">Password:</label>
                         <input type="password" id="newPassword" name="newPassword"/>
-                        <button>Sign up</button>
+                        <Button
+                            text='Sign up and play'
+                            onClick={onLogIn}
+                            data-role="primary"
+                            type="button"
+                        />
                     </div>
 
-                    <div class="guestAccount">
+                    <div className="guestAccount">
                         <p>Or play a quick session as guest</p>
-                        <button>Play as guest</button>
+                        <Button
+                            text='Play as guest'
+                            onClick={onLogIn}
+                            data-role="primary"
+                            type="button"
+                        />
                     </div>
                     
                 </div>
