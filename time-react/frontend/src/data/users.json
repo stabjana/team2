@@ -3,7 +3,7 @@
         "id": 1,
         "username": "Admin",
         "email": "email@email.com",
-        "password": "Qwerty", 
+        "password": "",
         "preferences": {
             "theme": "dark",
             "language": "en"
