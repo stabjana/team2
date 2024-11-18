@@ -1,33 +1,78 @@
+import { useState } from 'react';
 import './Login.css'
+import Button from '../Button/Button';
 
-function Login() {
+function Login({onLogIn, error, loading}) {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onLogIn(username, password); // pass username and password to the App
+    };
+
+    const handleSignUp = () => {
+
+
+
+        
+        alert("Sign-up functionality coming soon!"); // WRITE SIGN UP LOGIC LATER
+    };
+
+    const handleGuestPlay = () => {
+        onLogIn('Guest', ''); // use 'Guest' as a predefined user
+    };
+
     return (
         <div>
             <main>
-                <div id="logWindow" class="loginWindow">
-                    <div class="withAccount">
-                        <label for="username">Username: </label>
-                        <input type="text" id="username" name="username"/>
+                <div id="logWindow" className="loginWindow">
+                {error && <p className="error">{error}</p>}
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="username">Username:</label>
+                    <input
+                    type="text"
+                    id="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    disabled={loading}
+                    />
 
-                        <label for="password">Password: </label>
-                        <input type="password" id="password" name="password"/>
-                        <button>Log in/ Log out</button>
-                        <a href="#">Forgot your password?</a>
-                    </div>
+                    <label htmlFor="password">Password:</label>
+                    <input
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    disabled={loading}
+                    />
 
-                    <div class="noAccount">
+                    <Button text={loading ? "Logging in..." : "Log in"} type="submit" disabled={loading}/>
+                </form>
+
+                    <div className="noAccount">
                         <p> Sign up here, to save your progress.</p>
-                        <label for="newUsername">Username:</label>
+                        <label htmlFor="newUsername">Username:</label>
                         <input type="text" id="newUsername" name="newUsername"/>
 
-                        <label for="newPassword">Password:</label>
+                        <label htmlFor="newPassword">Password:</label>
                         <input type="password" id="newPassword" name="newPassword"/>
-                        <button>Sign up</button>
+                        <Button
+                            text='Sign up and play'
+                            onClick={handleSignUp}
+                            data-role="primary"
+                            type="button"
+                        />
                     </div>
 
-                    <div class="guestAccount">
+                    <div className="guestAccount">
                         <p>Or play a quick session as guest</p>
-                        <button>Play as guest</button>
+                        <Button
+                            text='Play as guest'
+                            onClick={handleGuestPlay}
+                            data-role="primary"
+                            type="button"
+                        />
                     </div>
                     
                 </div>
