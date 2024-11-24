@@ -1,40 +1,42 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-family: 'Righteous', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 1rem 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: "Righteous", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  margin: 1rem 4rem;
 }
 
 header {
-    display: flex;
-    padding: 1rem;
-    height: 100px;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #fefffa;
+  display: flex;
+  padding: 1rem;
+  height: 100px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fefffa;
 }
 
 #logo img {
-    height: 90px;
+  height: 90px;
 }
 
 header h1 {
-    font-family: 'Paytone One', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 65px;
-    -webkit-text-fill-color: #F7FF66;
-    -webkit-text-stroke-color: #5C48BC;
-    -webkit-text-stroke-width: 0.2pt;
-    margin: 0 4rem;
+  font-family: "Paytone One", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-size: 65px;
+  -webkit-text-fill-color: #f7ff66;
+  -webkit-text-stroke-color: #5c48bc;
+  -webkit-text-stroke-width: 0.2pt;
+  margin: 0 4rem;
 }
 
 /*nav ul {
@@ -48,136 +50,135 @@ nav ul li {
 }*/
 
 main {
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    background-color: #fefffa;
-    font-family: 'Righteous','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #5C48BC;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-color: #fefffa;
+  font-family: "Righteous", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  color: #5c48bc;
 }
 
-.boxForGameplayAndMenu{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 2rem;
-    width: 100%;
-    height: 100%;
+.boxForGameplayAndMenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
-.boxForGameplay{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 80%;
-    height: 100%;
-    position: relative;
-    /*background-image: url("playboard1.png");
+.boxForGameplay {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  /*background-image: url("playboard1.png");
     object-fit: contain;*/
-    z-index: 1
+  z-index: 1;
 }
 
 .playboard-img {
-    flex: 1;
-    position: absolute;
-    max-height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    border: #8168FE 2px solid;
-    z-index: 1;
-    /*opacity: 50%;*/
-    object-fit: cover;     
+  flex: 1;
+  position: absolute;
+  max-height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: #8168fe 2px solid;
+  z-index: 1;
+  /*opacity: 50%;*/
+  object-fit: cover;
 }
 
 .playboard-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: .1rem;
-    height: 100%;
-    z-index: 0;
-  }*/
-  
-.field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    background-color: #f5f5f5;
-    font-size: 1.5rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.1rem;
+  height: 100%;
+  z-index: 0;
+}
+*/ .field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333;
+  background-color: #f5f5f5;
+  font-size: 1.5rem;
 }
 
 .itemList {
-    display: flex;
-    flex-direction: row;
-    background-color: #d9f9cf;
+  display: flex;
+  flex-direction: row;
+  background-color: #d9f9cf;
 }
 
 .item {
-    background-color: #d9f9cf;
-    margin: .5rem;
-    padding: 1rem;
-    border-left: #5C48BC 1px solid;
-    border-right: #5C48BC 1px solid;
+  background-color: #d9f9cf;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-left: #5c48bc 1px solid;
+  border-right: #5c48bc 1px solid;
 }
 
-.boxForMenu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 20%;
-    height: 100%;
-    background-color:#BBBBFF;
-    border-radius: 5px;
-    border: #8168FE 2px solid;
-    /*margin: 0 .1rem;*/
-    padding: 1.5rem;
+.boxForMenu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 20%;
+  height: 100%;
+  background-color: #bbbbff;
+  border-radius: 5px;
+  border: #8168fe 2px solid;
+  /*margin: 0 .1rem;*/
+  padding: 1.5rem;
 }
 
 .user img {
-    width: 130px;
-    padding: 1rem 1.5rem 0 1rem;
-    background-color: #fefffa; 
-    border-radius: 5px;
-    border: #8168FE 2px solid;
-    
+  width: 130px;
+  padding: 1rem 1.5rem 0 1rem;
+  background-color: #fefffa;
+  border-radius: 5px;
+  border: #8168fe 2px solid;
 }
 
 button {
-    font-family: inherit;
-    font-size: inherit;
-    color: #5C48BC;
-    background-color: #F9FF87;
-    border: #EAF700 2px solid;
-    border-radius: 15px;
-    width: 80%;
-    align-self: center;
-    height: 2rem;
-    margin: 1rem 0;
-    padding: 0.2rem 0.5rem;
-    box-shadow: 0 4px 4px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.22);
+  font-family: inherit;
+  font-size: inherit;
+  color: #5c48bc;
+  background-color: #f9ff87;
+  border: #eaf700 2px solid;
+  border-radius: 15px;
+  width: 80%;
+  align-self: center;
+  height: 2rem;
+  margin: 1rem 0;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 #settings img {
-    width: 50px;
-    margin-top: 0.5rem;
+  width: 50px;
+  margin-top: 0.5rem;
 }
 
-.boxForSound{
-    height: 30%;
-    background-color: #f5f5f5;
+.boxForSound {
+  height: 30%;
+  background-color: #f5f5f5;
 }
 
 footer {
-    display: flex;
-    padding: .5rem;
-    /*height: 100px;*/
-    width: 100%;
-    align-self: flex-end;
-    background-color:  #fefffa;
-    font-size: 10px;
+  display: flex;
+  padding: 0.5rem;
+  /*height: 100px;*/
+  width: 100%;
+  align-self: flex-end;
+  background-color: #fefffa;
+  font-size: 10px;
 }

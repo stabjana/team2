@@ -1,81 +1,137 @@
-import './Gameplay.css'
-import Button from '../Button/Button'
+import "./Gameplay.css";
+import Button from "../Button/Button";
 
-function Gameplay({ onLogOut }){
-    return(
-        <main>
-            <div class="boxForTitle">
-                <h1>Time Link</h1>
+function Gameplay({ onLogOut }) {
+  return (
+    <main>
+      <div className="boxForTitle">
+        <h1>Time Link</h1>
+      </div>
+      <div className="boxForGameplayAndMenu">
+        <div className="boxForGameplay">
+          <div className="playboard-img">
+            <img src="assets/playboard1.png" alt="game playboard" />
+          </div>
+          <div className="playboard-grid" id="playboard-grid">
+            <div id="p1" className="field">
+              1
             </div>
-            <div class="boxForGameplayAndMenu">
-                <div class="boxForGameplay">
-                    <div class="playboard-img">
-                        <img src="assets/playboard1.png" alt="game playboard"/>
-                    </div>
-                    <div class="playboard-grid" id="playboard-grid">
-                        <div id="p1" class="field">1</div>
-                        <div id="p2" class="field">2</div>
-                        <div id="p3" class="field">3</div>
-                        <div id="p4" class="field">4</div>
-                        <div id="p5" class="field">5</div>
-                        <div id="p6" class="field">6</div>
-                        <div id="p7" class="field">7</div>
-                        <div id="p8" class="field">8</div>
-                        <div id="p9" class="field">9</div>
-                        <div id="p10" class="field">10</div>
-                        <div id="p11" class="field">11</div>
-                        <div id="p12" class="field">12</div>
-                        <div id="p13" class="field">13</div>
-                        <div id="p14" class="field">14</div>
-                        <div id="p15" class="field">15</div>
-                        <div id="p16" class="field">16</div>
-                        <div id="p17" class="field">17</div>
-                        <div id="p18" class="field">18</div>
-                        <div id="p19" class="field">19</div>
-                        <div id="p20" class="field">20</div>
-                    </div>
-
-                    <div id="itemList" class="itemList">
-                        <div id="item1" class="item">Item 1</div>
-                        <div id="item2" class="item">Item 2</div>
-                        <div id="item3" class="item">Item 3</div>
-                        <div id="item4" class="item">Item 4</div>
-                        <div id="item5" class="item">Item 5</div>
-                        <div id="item6" class="item">Item 6</div>
-                        <div id="item7" class="item">Item 7</div>
-                        <div id="item8" class="item">Item 8</div>
-                    </div>
-                </div>
-                <aside class="boxForMenu">
-                    <div id="user" class="user">
-                        <img src="assets/userpic.svg" alt="little Alien"/>
-                        <h3 id="userName">Username</h3>
-                    </div>
-
-                    <div id="gameProgress" class="gameProgress">
-                        <h3>Progress</h3>
-                        <p>Show something here, maybe a diagram</p>
-                    </div>
-                    <div class="boxForSound">
-                        <p>Player here</p>
-                    </div>
-                    <button id="nextRiddle">Play next</button>
-                    <Button
-                            text='Exit'
-                            onClick={onLogOut}
-                            data-role="primary"
-                            type="button"
-                    />
-                    {/* <button id="settings">gearwheel</button> */}
-                    <div id="settings">
-                        <a href="#">
-                            <img src="assets/icons8-settings.svg" alt=""/>
-                        </a>
-                    </div>
-                </aside>
+            <div id="p2" className="field">
+              2
             </div>
-        </main>
-    )
+            <div id="p3" className="field">
+              3
+            </div>
+            <div id="p4" className="field">
+              4
+            </div>
+            <div id="p5" className="field">
+              5
+            </div>
+            <div id="p6" className="field">
+              6
+            </div>
+            <div id="p7" className="field">
+              7
+            </div>
+            <div id="p8" className="field">
+              8
+            </div>
+            <div id="p9" className="field">
+              9
+            </div>
+            <div id="p10" className="field">
+              10
+            </div>
+            <div id="p11" className="field">
+              11
+            </div>
+            <div id="p12" className="field">
+              12
+            </div>
+            <div id="p13" className="field">
+              13
+            </div>
+            <div id="p14" className="field">
+              14
+            </div>
+            <div id="p15" className="field">
+              15
+            </div>
+            <div id="p16" className="field">
+              16
+            </div>
+            <div id="p17" className="field">
+              17
+            </div>
+            <div id="p18" className="field">
+              18
+            </div>
+            <div id="p19" className="field">
+              19
+            </div>
+            <div id="p20" className="field">
+              20
+            </div>
+          </div>
+
+          <div id="itemList" className="itemList">
+            <div id="item1" className="item">
+              Item 1
+            </div>
+            <div id="item2" className="item">
+              Item 2
+            </div>
+            <div id="item3" className="item">
+              Item 3
+            </div>
+            <div id="item4" className="item">
+              Item 4
+            </div>
+            <div id="item5" className="item">
+              Item 5
+            </div>
+            <div id="item6" className="item">
+              Item 6
+            </div>
+            <div id="item7" className="item">
+              Item 7
+            </div>
+            <div id="item8" className="item">
+              Item 8
+            </div>
+          </div>
+        </div>
+        <aside className="boxForMenu">
+          <div id="user" className="user">
+            <img src="assets/userpic.svg" alt="little Alien" />
+            <h3 id="userName">Username</h3>
+          </div>
+
+          <div id="gameProgress" className="gameProgress">
+            <h3>Progress</h3>
+            <p>Show something here, maybe a diagram</p>
+          </div>
+          <div className="boxForSound">
+            <p>Player here</p>
+          </div>
+          <button id="nextRiddle">Play next</button>
+          <Button
+            text="Exit"
+            onClick={onLogOut}
+            data-role="primary"
+            type="button"
+          />
+          {/* <button id="settings">gearwheel</button> */}
+          <div id="settings">
+            <a href="#">
+              <img src="assets/icons8-settings.svg" alt="" />
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+  );
 }
 
 export default Gameplay;
