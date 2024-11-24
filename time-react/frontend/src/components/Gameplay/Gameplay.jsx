@@ -1,10 +1,20 @@
 import "./Gameplay.css";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import userPic from "../../assets/userpic.svg";
+import placeAlienOnGrid from '../../../src/utilits/placeAlienOnGrid';
+import alienImage from '../../assets/bob.png';
 
-import boardImage from "../../assets/board.png";
+const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
 
 function Gameplay({ onLogOut }) {
+  const [currentFieldIndex, setCurrentFieldIndex] = useState(0);
+  const handleMoveNext = () => {
+    const nextIndex = (currentFieldIndex + 1) % gameplayFields.length; // Loop back to the start
+    const nextFieldId = `${gameplayFields[nextIndex]}`; // Get the next field ID
+    placeAlienOnGrid(nextFieldId, alienImage); // Move the alien
+    setCurrentFieldIndex(nextIndex); // Update the current index
+  };
   return (
     <main>
       <div className="boxForTitle">
@@ -18,7 +28,7 @@ function Gameplay({ onLogOut }) {
 
           <div className="playboard-grid" id="playboard-grid">
             {[...Array(60)].map((_, index) => (
-              <div key={index} id={`p${index + 1}`} className="field">
+              <div key={index} id={index + 1} className="field">
                 {index + 1}
               </div>
             ))}
@@ -45,7 +55,12 @@ function Gameplay({ onLogOut }) {
           <div className="boxForSound">
             <p>Player here</p>
           </div>
-          <button id="nextRiddle">Play next</button>
+          <Button
+            text="Play next"
+            onClick={handleMoveNext} // Call the function to move to the next field
+            data-role="primary"
+            type="button"
+          />
           <Button
             text="Exit"
             onClick={onLogOut}
