@@ -1,5 +1,8 @@
 import "./Gameplay.css";
 import Button from "../Button/Button";
+import userPic from "../../assets/userpic.svg";
+
+import boardImage from "../../assets/board.png";
 
 function Gameplay({ onLogOut }) {
   return (
@@ -10,101 +13,28 @@ function Gameplay({ onLogOut }) {
       <div className="boxForGameplayAndMenu">
         <div className="boxForGameplay">
           <div className="playboard-img">
-            <img src="assets/playboard1.png" alt="game playboard" />
+            {/* <img className="playboard-img" src={boardImage} alt="game playboard" /> */}
           </div>
+
           <div className="playboard-grid" id="playboard-grid">
-            <div id="p1" className="field">
-              1
-            </div>
-            <div id="p2" className="field">
-              2
-            </div>
-            <div id="p3" className="field">
-              3
-            </div>
-            <div id="p4" className="field">
-              4
-            </div>
-            <div id="p5" className="field">
-              5
-            </div>
-            <div id="p6" className="field">
-              6
-            </div>
-            <div id="p7" className="field">
-              7
-            </div>
-            <div id="p8" className="field">
-              8
-            </div>
-            <div id="p9" className="field">
-              9
-            </div>
-            <div id="p10" className="field">
-              10
-            </div>
-            <div id="p11" className="field">
-              11
-            </div>
-            <div id="p12" className="field">
-              12
-            </div>
-            <div id="p13" className="field">
-              13
-            </div>
-            <div id="p14" className="field">
-              14
-            </div>
-            <div id="p15" className="field">
-              15
-            </div>
-            <div id="p16" className="field">
-              16
-            </div>
-            <div id="p17" className="field">
-              17
-            </div>
-            <div id="p18" className="field">
-              18
-            </div>
-            <div id="p19" className="field">
-              19
-            </div>
-            <div id="p20" className="field">
-              20
-            </div>
+            {[...Array(60)].map((_, index) => (
+              <div key={index} id={`p${index + 1}`} className="field">
+                {index + 1}
+              </div>
+            ))}
           </div>
 
           <div id="itemList" className="itemList">
-            <div id="item1" className="item">
-              Item 1
-            </div>
-            <div id="item2" className="item">
-              Item 2
-            </div>
-            <div id="item3" className="item">
-              Item 3
-            </div>
-            <div id="item4" className="item">
-              Item 4
-            </div>
-            <div id="item5" className="item">
-              Item 5
-            </div>
-            <div id="item6" className="item">
-              Item 6
-            </div>
-            <div id="item7" className="item">
-              Item 7
-            </div>
-            <div id="item8" className="item">
-              Item 8
-            </div>
+            {[...Array(8)].map((_, index) => (
+              <div key={index} id={`item${index + 1}`} className="item">
+                Item {index + 1}
+              </div>
+            ))}
           </div>
         </div>
         <aside className="boxForMenu">
           <div id="user" className="user">
-            <img src="assets/userpic.svg" alt="little Alien" />
+            <img src={userPic} alt="little Alien" />
             <h3 id="userName">Username</h3>
           </div>
 

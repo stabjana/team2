@@ -7,7 +7,7 @@ import users from './data/users.json';
 import './App.css'
 
 function App() {
-  const [isLoggedIn, setLogIn] = useState(false);//LOGGED IN BY DEFAULT
+  const [isLoggedIn, setLogIn] = useState(false);
   const [error, setError] = useState('');
   const [currentUser, setCurrentUser] = useState(null); // store the logged-in user's info
   const [loading, setLoading] = useState(false);//USE THIS STATE LATER WITH FETCH OR DB REQUEST
