@@ -5,6 +5,7 @@ import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from '../../../src/utilits/placeAlienOnGrid';
 import alienImage from '../../assets/bob.png';
 import lockIcon from '../../assets/icons8-lock-64.png';
+import settingsIcon from '../../assets/icons8-settings.svg';
 
 const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
 
@@ -82,7 +83,7 @@ function Gameplay({ onLogOut }) {
           {/* <button id="settings">gearwheel</button> */}
           <div id="settings">
             <a href="#">
-              <img src="assets/icons8-settings.svg" alt="" />
+              <img src={settingsIcon} className="settingsIcon" alt="settings icon" />
             </a>
           </div>
         </aside>
