@@ -22,8 +22,10 @@ function Login({ onLogIn, error, loading }) {
   return (
     <div>
       <main>
+      <div className="loginPage">
         <div id="logWindow" className="loginWindow">
           {error && <p className="error">{error}</p>}
+          <h2>Log In</h2>
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">Username:</label>
             <input
@@ -33,7 +35,6 @@ function Login({ onLogIn, error, loading }) {
               onChange={(e) => setUsername(e.target.value)}
               disabled={loading}
             />
-
             <label htmlFor="password">Password:</label>
             <input
               type="password"
@@ -42,21 +43,16 @@ function Login({ onLogIn, error, loading }) {
               onChange={(e) => setPassword(e.target.value)}
               disabled={loading}
             />
-
             <Button
-              text={loading ? "Logging in..." : "Log in"}
-              type="submit"
-              disabled={loading}
+            text={loading ? "Logging in..." : "Log in"}
+            type="submit"
+            disabled={loading}
             />
           </form>
 
           <div className="noAccount">
-            <p> Sign up here, to save your progress.</p>
-            <label htmlFor="newUsername">Username:</label>
-            <input type="text" id="newUsername" name="newUsername" />
-
-            <label htmlFor="newPassword">Password:</label>
-            <input type="password" id="newPassword" name="newPassword" />
+            <h3> Don't have an account yet?</h3>
+            <p>Sign up here to save your progress:</p>
             <Button
               text="Sign up and play"
               onClick={handleSignUp}
@@ -66,15 +62,16 @@ function Login({ onLogIn, error, loading }) {
           </div>
 
           <div className="guestAccount">
-            <p>Or play a quick session as guest</p>
-            <Button
-              text="Play as guest"
-              onClick={handleGuestPlay}
-              data-role="primary"
-              type="button"
-            />
+            <p>Or play a quick session as guest:</p>
+              <Button
+                text="Play as guest"
+                onClick={handleGuestPlay}
+                data-role="primary"
+                type="button"
+              />
           </div>
         </div>
+      </div>
       </main>
     </div>
   );
