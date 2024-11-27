@@ -1,14 +1,14 @@
 button {
-    font-family: inherit;
-    font-size: inherit;
-    color: #5C48BC;
-    background-color: #F9FF87;
-    border: #EAF700 2px solid;
-    border-radius: 15px;
-    width: 80%;
-    align-self: center;
-    height: 2rem;
-    margin: 1rem 0;
-    padding: 0.2rem 0.5rem;
-    box-shadow: 0 4px 4px rgba(0,0,0,.25),0 3px 6px rgba(0,0,0,.22);
+  font-family: inherit;
+  font-size: 16px;
+  color: #5c48bc;
+  background-color: #f9ff87;
+  border: #eaf700 2px solid;
+  border-radius: 15px;
+  width: 180px;
+  align-self: center;
+  height: 2rem;
+  margin: 1rem 0;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
