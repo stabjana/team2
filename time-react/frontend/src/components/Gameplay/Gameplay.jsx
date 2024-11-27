@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from '../../../src/utilits/placeAlienOnGrid';
 import alienImage from '../../assets/bob.png';
+import lockIcon from '../../assets/icons8-lock-64.png';
 
 const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
 
@@ -17,9 +18,6 @@ function Gameplay({ onLogOut }) {
   };
   return (
     <main>
-      <div className="boxForTitle">
-        <h1>Time Link</h1>
-      </div>
       <div className="boxForGameplayAndMenu">
         <div className="boxForGameplay">
           <div className="playboard-img">
@@ -27,17 +25,33 @@ function Gameplay({ onLogOut }) {
           </div>
 
           <div className="playboard-grid" id="playboard-grid">
-            {[...Array(60)].map((_, index) => (
+            {[...Array(165)].map((_, index) => (
               <div key={index} id={index + 1} className="field">
                 {index + 1}
               </div>
             ))}
+
+             {/* <div className="gameboardPath">
+                <div className="gameboardPlace" id="squareStart"></div>
+                <div className="gameboardPlace" id="square1"></div>
+                <div className="gameboardPlace" id="square2"></div>
+                <div className="gameboardPlace" id="square3"></div>
+                <div className="gameboardPlace" id="square4"></div>
+                <div className="gameboardPlace" id="square5"></div>
+                <div className="gameboardPlace" id="square6"></div>
+                <div className="gameboardPlace" id="square7"></div>
+                <div className="gameboardPlace" id="square8"></div>
+                <div className="gameboardPlace" id="square9"></div>
+                <div className="gameboardPlace" id="square10"></div>
+                <div className="gameboardPlace" id="squareFinish"></div>
+              </div>*/
+            }
           </div>
 
           <div id="itemList" className="itemList">
-            {[...Array(8)].map((_, index) => (
+            {[...Array(10)].map((_, index) => (
               <div key={index} id={`item${index + 1}`} className="item">
-                Item {index + 1}
+                <img src={lockIcon} className="lockIcon" alt="lock icon" />
               </div>
             ))}
           </div>
@@ -49,8 +63,6 @@ function Gameplay({ onLogOut }) {
           </div>
 
           <div id="gameProgress" className="gameProgress">
-            <h3>Progress</h3>
-            <p>Show something here, maybe a diagram</p>
           </div>
           <div className="boxForSound">
             <p>Player here</p>
