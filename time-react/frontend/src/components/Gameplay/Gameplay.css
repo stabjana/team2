@@ -5,8 +5,9 @@ main {
   height: 100%;
   align-items: center;
   background-color: #fefffa;
-  font-family: 'Righteous', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #5C48BC;
+  font-family: "Righteous", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  color: #5c48bc;
 }
 
 .boxForGameplayAndMenu {
@@ -27,9 +28,9 @@ main {
   height: 100%;
   position: relative;
   z-index: 1;
-  border: #8168FE 2px solid;
+  border: #8168fe 2px solid;
   border-radius: 5px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .25), 0 3px 6px rgba(0, 0, 0, .22);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .playboard-grid {
@@ -40,20 +41,29 @@ main {
   max-height: 100%;
   width: 100%;
   z-index: 0;
-  background-image: url("../../assets/board37.png");
+  background-image: url("../../assets/gameboard.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
 }
+
+/* .field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    font-size: 1.5rem;
+    opacity: 20%;
+} */
 
 .field {
   /*display: flex;
-  align-items: center;
-  justify-content: center;*/
+    align-items: center;
+    justify-content: center;*/
   /*width: 70px;
-  max-height: 70px;*/
-  position: relative;
-  /* Enables proper positioning for .alien */
+    max-height: 70px;*/
+  position: relative; /* Enables proper positioning for .alien */
   /*border: 1px solid #333;*/
   background-color: transparent;
   /*background-color: rgba(245, 245, 245, 0.2); /* Transparent background */
@@ -70,16 +80,17 @@ main {
   background-color: #d9f9cf;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-top: #8168FE 2px solid;
+  border-top: #8168fe 2px solid;
 }
 
 .item {
   background-color: #fefffa;
+  /*margin: .5rem;*/
   height: 70px;
   width: 10%;
   padding: 0.5rem;
-  border-left: #8168FE 1px solid;
-  border-right: #8168FE 1px solid;
+  border-left: #8168fe 1px solid;
+  border-right: #8168fe 1px solid;
 }
 
 .lockIcon {
@@ -88,44 +99,44 @@ main {
 }
 
 #item1 {
-  border: solid #FFFFBB 6px;
+  border: solid #ffffbb 6px;
   border-bottom-left-radius: 5px;
 }
 
 #item2 {
-  border: solid #FFDDBB 6px;
+  border: solid #ffddbb 6px;
 }
 
 #item3 {
-  border: solid #FFBBBB 6px;
+  border: solid #ffbbbb 6px;
 }
 
 #item4 {
-  border: solid #FFBBDD 6px;
+  border: solid #ffbbdd 6px;
 }
 
 #item5 {
-  border: solid #FFBBFF 6px;
+  border: solid #ffbbff 6px;
 }
 
 #item6 {
-  border: solid #DCBBFF 6px;
+  border: solid #dcbbff 6px;
 }
 
 #item7 {
-  border: solid #BBDDFF 6px;
+  border: solid #bbddff 6px;
 }
 
 #item8 {
-  border: solid #BBFFFF 6px;
+  border: solid #bbffff 6px;
 }
 
 #item9 {
-  border: solid #BBFFDD 6px;
+  border: solid #bbffdd 6px;
 }
 
 #item10 {
-  border: solid #BBFFBB 6px;
+  border: solid #bbffbb 6px;
   border-bottom-right-radius: 5px;
 }
 
@@ -138,12 +149,11 @@ main {
   text-align: center;
   width: 20%;
   height: 100%;
-  background-color: #BBBBFF;
+  background-color: #bbbbff;
   border-radius: 5px;
-  border: #8168FE 2px solid;
-  /*margin: 0 .1rem;*/
+  border: #8168fe 2px solid;
   padding: 2rem 0.5rem 0 0.5rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .25), 0 3px 6px rgba(0, 0, 0, .22);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .user img {
@@ -151,8 +161,8 @@ main {
   padding: 1rem 1.5rem 0 1rem;
   background-color: #fefffa;
   border-radius: 5px;
-  border: #8168FE 2px solid;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .25), 0 3px 6px rgba(0, 0, 0, .22);
+  border: #8168fe 2px solid;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .settingsIcon {
@@ -166,37 +176,28 @@ main {
   margin: 1rem 0;
   background-color: #f5f5f5;
   border-radius: 5px;
-  border: #8168FE 2px solid;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, .25), 0 3px 6px rgba(0, 0, 0, .22);
+  border: #8168fe 2px solid;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 /* .alien {
-  width: 100%;
-  height: 100%;
-  background-color: green;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } */
 
 .alien {
-  position: absolute;
-  /* Ensures it's positioned within the field */
-  top: 50%;
-  /* Centers vertically */
-  left: 50%;
-  /* Centers horizontally */
-  transform: translate(-50%, -50%);
-  /* Adjusts position to center */
-  width: 100px;
-  /* Relative size to the grid cell */
-  height: auto;
-  /* Maintain aspect ratio */
-  pointer-events: none;
-  /* Allows interactions with the cell itself */
-  z-index: 10;
-  /* Places the alien above other elements */
-  opacity: 1;
-  /* Full visibility */
+  position: absolute; /* Ensures it's positioned within the field */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Adjusts position to center */
+  width: 100px; /* Relative size to the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  pointer-events: none; /* Allows interactions with the cell itself */
+  z-index: 10; /* Places the alien above other elements */
+  opacity: 1; /* Full visibility */
 }
