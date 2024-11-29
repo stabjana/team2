@@ -6,8 +6,9 @@ import Button from "../Button/Button";
 import ShowRiddle from "../ShowRiddle/ShowRiddle";
 import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from "../../../src/utilits/placeAlienOnGrid";
-
-import alienImage from '../../assets/alienbob.png';
+import alienImage from "../../assets/alienbob.png";
+import lockIcon from "../../assets/icons8-lock-64.png";
+import settingsIcon from "../../assets/icons8-settings.svg";
 
 
 const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
