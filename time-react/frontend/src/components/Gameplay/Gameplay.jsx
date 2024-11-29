@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGem } from "@fortawesome/free-solid-svg-icons";
+/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGem } from "@fortawesome/free-solid-svg-icons"; */
 import "./Gameplay.css";
 import Button from "../Button/Button";
 import ShowRiddle from "../ShowRiddle/ShowRiddle";
 import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from "../../../src/utilits/placeAlienOnGrid";
+
 import alienImage from '../../assets/alienbob.png';
+
 
 const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
 
@@ -62,8 +64,10 @@ function Gameplay({ onLogOut }) {
 
   return (
     <main>
+
       <div className="boxForTitle">
       </div>
+
       <div className="boxForGameplayAndMenu">
         <div className="boxForGameplay">
           <div className="playboard-grid" id="playboard-grid">
@@ -74,15 +78,12 @@ function Gameplay({ onLogOut }) {
             ))}
           </div>
           <div id="itemList" className="itemList">
-            {rewards.map((_, index) => (
+            {[...Array(10)].map((_, index) => (
               <div
                 key={index}
                 className="item flex justify-center items-center"
               >
-                <FontAwesomeIcon
-                  icon={faGem}
-                  className="text-red-500 text-2xl"
-                />
+                <img src={lockIcon} className="lockIcon" alt="lock icon" />
               </div>
             ))}
           </div>
@@ -113,7 +114,11 @@ function Gameplay({ onLogOut }) {
           <Button text="Exit" onClick={onLogOut} data-role="primary" />
           <div id="settings">
             <a href="#">
-              <img src="assets/icons8-settings.svg" alt="" />
+              <img
+                src={settingsIcon}
+                className="settingsIcon"
+                alt="settings icon"
+              />
             </a>
           </div>
         </aside>
