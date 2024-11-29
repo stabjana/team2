@@ -6,9 +6,9 @@ import Button from "../Button/Button";
 import ShowRiddle from "../ShowRiddle/ShowRiddle";
 import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from "../../../src/utilits/placeAlienOnGrid";
-import alienImage from "../../assets/bob.png";
+import alienImage from '../../assets/alienbob.png';
 
-const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
+const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
 
 function Gameplay({ onLogOut }) {
   const [currentFieldIndex, setCurrentFieldIndex] = useState(0);
@@ -63,12 +63,11 @@ function Gameplay({ onLogOut }) {
   return (
     <main>
       <div className="boxForTitle">
-        <h1>Time Link</h1>
       </div>
       <div className="boxForGameplayAndMenu">
         <div className="boxForGameplay">
           <div className="playboard-grid" id="playboard-grid">
-            {[...Array(60)].map((_, index) => (
+            {[...Array(294)].map((_, index) => (
               <div key={index} id={index + 1} className="field">
                 {index + 1}
               </div>
