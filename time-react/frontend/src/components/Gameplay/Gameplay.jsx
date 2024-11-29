@@ -1,20 +1,65 @@
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGem } from "@fortawesome/free-solid-svg-icons";
 import "./Gameplay.css";
-import React, { useState } from "react";
 import Button from "../Button/Button";
+import ShowRiddle from "../ShowRiddle/ShowRiddle";
 import userPic from "../../assets/userpic.svg";
-import placeAlienOnGrid from '../../../src/utilits/placeAlienOnGrid';
-import alienImage from '../../assets/bob.png';
+import placeAlienOnGrid from "../../../src/utilits/placeAlienOnGrid";
+import alienImage from "../../assets/bob.png";
 
 const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
 
 function Gameplay({ onLogOut }) {
   const [currentFieldIndex, setCurrentFieldIndex] = useState(0);
-  const handleMoveNext = () => {
-    const nextIndex = (currentFieldIndex + 1) % gameplayFields.length; // Loop back to the start
-    const nextFieldId = `${gameplayFields[nextIndex]}`; // Get the next field ID
-    placeAlienOnGrid(nextFieldId, alienImage); // Move the alien
-    setCurrentFieldIndex(nextIndex); // Update the current index
+  const [riddle, setRiddle] = useState(null);
+  const [userAnswer, setUserAnswer] = useState("");
+  const [rewards, setRewards] = useState([]);
+
+  // Initialize the avatar at the starting grid
+  useEffect(() => {
+    const startingFieldId = `${gameplayFields[0]}`; // Get the starting grid ID
+    placeAlienOnGrid(startingFieldId, alienImage); // Place the alien on the grid
+    fetchRiddle(); // Fetch the first riddle
+  }, []);
+
+  // Fetch a new riddle from the API
+  const fetchRiddle = async () => {
+    try {
+      const response = await fetch("https://riddles-api.vercel.app/random");
+      const data = await response.json();
+      console.log("Fetched Riddle:", data); // Debugging the response
+      setRiddle(data); // Set the full API response
+    } catch (error) {
+      console.error("Failed to fetch riddle:", error);
+      setRiddle({
+        riddle: "Error fetching riddle. Please try again later.",
+        answer: "",
+      });
+    }
   };
+
+  const handleMoveNext = () => {
+    const nextIndex = (currentFieldIndex + 1) % gameplayFields.length;
+    const nextFieldId = `${gameplayFields[nextIndex]}`;
+    placeAlienOnGrid(nextFieldId, alienImage); // Move the alien to the next grid
+    setCurrentFieldIndex(nextIndex);
+    fetchRiddle(); // Fetch a new riddle when moving to the next stage
+    setUserAnswer(""); // Reset the answer input
+  };
+
+  const handleAnswerSubmit = () => {
+    if (
+      userAnswer.trim().toLowerCase() === riddle?.answer?.trim().toLowerCase()
+    ) {
+      alert("Correct! You earned a gem.");
+      setRewards([...rewards, "Gem"]); // Add gem to rewards
+      handleMoveNext(); // Automatically move the avatar to the next grid
+    } else {
+      alert("Incorrect answer. Try again.");
+    }
+  };
+
   return (
     <main>
       <div className="boxForTitle">
@@ -22,10 +67,6 @@ function Gameplay({ onLogOut }) {
       </div>
       <div className="boxForGameplayAndMenu">
         <div className="boxForGameplay">
-          <div className="playboard-img">
-            {/* <img className="playboard-img" src={boardImage} alt="game playboard" /> */}
-          </div>
-
           <div className="playboard-grid" id="playboard-grid">
             {[...Array(60)].map((_, index) => (
               <div key={index} id={index + 1} className="field">
@@ -33,11 +74,16 @@ function Gameplay({ onLogOut }) {
               </div>
             ))}
           </div>
-
           <div id="itemList" className="itemList">
-            {[...Array(8)].map((_, index) => (
-              <div key={index} id={`item${index + 1}`} className="item">
-                Item {index + 1}
+            {rewards.map((_, index) => (
+              <div
+                key={index}
+                className="item flex justify-center items-center"
+              >
+                <FontAwesomeIcon
+                  icon={faGem}
+                  className="text-red-500 text-2xl"
+                />
               </div>
             ))}
           </div>
@@ -47,27 +93,25 @@ function Gameplay({ onLogOut }) {
             <img src={userPic} alt="little Alien" />
             <h3 id="userName">Username</h3>
           </div>
-
           <div id="gameProgress" className="gameProgress">
             <h3>Progress</h3>
-            <p>Show something here, maybe a diagram</p>
+            <p>Current Field: {gameplayFields[currentFieldIndex]}</p>
           </div>
-          <div className="boxForSound">
-            <p>Player here</p>
+          <div className="riddle-section">
+            <ShowRiddle riddle={riddle} />
+            <input
+              type="text"
+              value={userAnswer}
+              onChange={(e) => setUserAnswer(e.target.value)}
+              placeholder="Enter your answer"
+            />
+            <Button
+              text="Submit Answer"
+              onClick={handleAnswerSubmit}
+              data-role="secondary"
+            />
           </div>
-          <Button
-            text="Play next"
-            onClick={handleMoveNext} // Call the function to move to the next field
-            data-role="primary"
-            type="button"
-          />
-          <Button
-            text="Exit"
-            onClick={onLogOut}
-            data-role="primary"
-            type="button"
-          />
-          {/* <button id="settings">gearwheel</button> */}
+          <Button text="Exit" onClick={onLogOut} data-role="primary" />
           <div id="settings">
             <a href="#">
               <img src="assets/icons8-settings.svg" alt="" />
