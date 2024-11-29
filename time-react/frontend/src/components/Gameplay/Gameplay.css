@@ -40,7 +40,7 @@ main {
   max-height: 100%;
   width: 100%;
   z-index: 0;
-  background-image: url("../../assets/board37.png");
+  background-image: url("../../assets/gameboard.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
