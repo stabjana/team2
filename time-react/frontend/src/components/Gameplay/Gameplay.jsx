@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import userPic from "../../assets/userpic.svg";
 import placeAlienOnGrid from '../../../src/utilits/placeAlienOnGrid';
-import alienImage from '../../assets/bob.png';
+import alienImage from '../../assets/alienbob.png';
 import lockIcon from '../../assets/icons8-lock-64.png';
 import settingsIcon from '../../assets/icons8-settings.svg';
 
-const gameplayFields = [1, 33, 14, 43, 41, 26, 47, 17, 38, 29, 50]; // Playable fields
+const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
 
 function Gameplay({ onLogOut }) {
   const [currentFieldIndex, setCurrentFieldIndex] = useState(0);
@@ -26,27 +26,11 @@ function Gameplay({ onLogOut }) {
           </div>
 
           <div className="playboard-grid" id="playboard-grid">
-            {[...Array(165)].map((_, index) => (
+            {[...Array(294)].map((_, index) => (
               <div key={index} id={index + 1} className="field">
                 {index + 1}
               </div>
             ))}
-
-             {/* <div className="gameboardPath">
-                <div className="gameboardPlace" id="squareStart"></div>
-                <div className="gameboardPlace" id="square1"></div>
-                <div className="gameboardPlace" id="square2"></div>
-                <div className="gameboardPlace" id="square3"></div>
-                <div className="gameboardPlace" id="square4"></div>
-                <div className="gameboardPlace" id="square5"></div>
-                <div className="gameboardPlace" id="square6"></div>
-                <div className="gameboardPlace" id="square7"></div>
-                <div className="gameboardPlace" id="square8"></div>
-                <div className="gameboardPlace" id="square9"></div>
-                <div className="gameboardPlace" id="square10"></div>
-                <div className="gameboardPlace" id="squareFinish"></div>
-              </div>*/
-            }
           </div>
 
           <div id="itemList" className="itemList">

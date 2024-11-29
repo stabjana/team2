@@ -28,25 +28,23 @@ main {
   height: 100%;
   position: relative;
   z-index: 1;
+  border: #8168fe 2px solid;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .playboard-grid {
   flex: 1;
   display: grid;
-  /*grid-template-columns: repeat(17, 1fr);*/
-  grid-template-columns: [line1] 10.6% [line2] 8% [line3] 4.9% [line4] 1% [line5] 2.5% [line6] 0.9% [line7] 8.9% [line8] 12.3% [line9] 7.05% [line10] 7.05% [line11] 7.05% [line12] 7.05% [line13] 7.05% [line14] 7.05% [line15] 8.6% [line16];
-  grid-template-rows: [line1] 12.1% [line2] 12.1% [line3] 8.1% [line4] 8.1% [line5] 10.7% [line6] 7.4% [line7] 7.4% [line8] 7.4% [line9] 10% [line10] 6.7% [line11] 10% [line12];
-  gap: 0rem;
-  height: 100%;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 0px;
+  max-height: 100%;
   width: 100%;
   z-index: 0;
-  background-image: url("../../assets/board3.png");
-  background-size: contain;
+  background-image: url("../../assets/gameboard.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border: #8168fe 2px solid;
 }
 
 /* .field {
@@ -66,58 +64,13 @@ main {
   /*width: 70px;
     max-height: 70px;*/
   position: relative; /* Enables proper positioning for .alien */
-  border: 1px solid #333;
-  background-color: rgba(245, 245, 245, 0.2); /* Transparent background */
+  /*border: 1px solid #333;*/
+  background-color: transparent;
+  /*background-color: rgba(245, 245, 245, 0.2); /* Transparent background */
   font-size: 0.7rem;
-  color: #333;
-}
-
-#squareStart {
-  grid-area: 4 / 4 / span 2 / span 2;
-}
-
-#square1 {
-  grid-area: 6 / 3 / span 2 / span 1;
-}
-
-#square2 {
-  grid-area: 2 / 7 / span 2 / span 1;
-}
-
-#square3 {
-  grid-area: 9 / 4 / span 2 / span 3;
-}
-
-#square4 {
-  grid-area: 6 / 1 / span 3 / span 1;
-}
-
-#square5 {
-  grid-area: 3 / 9 / span 3 / span 1;
-}
-
-#square6 {
-  grid-area: 6 / 10 / span 3 / span 1;
-}
-
-#square7 {
-  grid-area: 2 / 11 / span 1 / span 1;
-}
-
-#square8 {
-  grid-area: 6 / 12 / span 2 / span 1;
-}
-
-#square9 {
-  grid-area: 3 / 13 / span 2 / span 1;
-}
-
-#square10 {
-  grid-area: 8 / 14 / span 2 / span 1;
-}
-
-#squareFinish {
-  grid-area: 4 / 15 / span 2 / span 1;
+  color: transparent;
+  text-align: center;
+  width: 75px;
 }
 
 .itemList {
@@ -127,8 +80,7 @@ main {
   background-color: #d9f9cf;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  border: #8168fe 2px solid;
-  border-top: none;
+  border-top: #8168fe 2px solid;
 }
 
 .item {
@@ -148,6 +100,7 @@ main {
 
 #item1 {
   border: solid #ffffbb 6px;
+  border-bottom-left-radius: 5px;
 }
 
 #item2 {
@@ -184,6 +137,7 @@ main {
 
 #item10 {
   border: solid #bbffbb 6px;
+  border-bottom-right-radius: 5px;
 }
 
 .boxForMenu {
@@ -198,8 +152,8 @@ main {
   background-color: #bbbbff;
   border-radius: 5px;
   border: #8168fe 2px solid;
-  /*margin: 0 .1rem;*/
   padding: 2rem 0.5rem 0 0.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .user img {
@@ -208,6 +162,7 @@ main {
   background-color: #fefffa;
   border-radius: 5px;
   border: #8168fe 2px solid;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 .settingsIcon {
@@ -222,6 +177,7 @@ main {
   background-color: #f5f5f5;
   border-radius: 5px;
   border: #8168fe 2px solid;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.22);
 }
 
 /* .alien {
