@@ -56,11 +56,13 @@ const Modal = ({ isOpen, onClose, handleMoveNext, setRewards  }) => {
             {riddle ? (
                 <>
                     <ShowRiddle riddle={riddle} />
-                    {answers.map((answer, index) => (
-                    <Button
-                        key={index} onClick={() => handleAnswerSubmit(answer)} text = {answer}>
-                    </Button>
-                    ))}
+                    <div className="answer-buttons">
+                        {answers.map((answer, index) => (
+                        <button className="answer-button"
+                            key={index} onClick={() => handleAnswerSubmit(answer)}> {answer}
+                        </button>
+                        ))}
+                    </div>
                 </>
             ) : (
                 <p>Loading...</p>
