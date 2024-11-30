@@ -9,7 +9,7 @@ import placeAlienOnGrid from "../../../src/utilits/placeAlienOnGrid";
 import alienImage from "../../assets/alienbob.png";
 import lockIcon from "../../assets/icons8-lock-64.png";
 import settingsIcon from "../../assets/icons8-settings.svg";
-
+import Modal from '../Modal/Modal';
 
 const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
 
@@ -63,6 +63,12 @@ function Gameplay({ onLogOut }) {
     }
   };
 
+  //Modal block starts here
+  const [isModalOpen, setIsModalOpen] = useState(false);//modal is closed by default
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+  //Modal block ends here
+
   return (
     <main>
 
@@ -97,6 +103,21 @@ function Gameplay({ onLogOut }) {
           <div id="gameProgress" className="gameProgress">
             <h3>Progress</h3>
             <p>Current Field: {gameplayFields[currentFieldIndex]}</p>
+          </div>
+          <div>
+            <Button
+              text="Next riddle"
+              onClick={openModal}
+            />
+            <Modal
+              isOpen={isModalOpen}
+              onClose={closeModal}>
+              <div className="riddle-section">
+                {/* Your riddles go here */
+                  'Test'
+                }
+              </div>
+            </Modal>
           </div>
           <div className="riddle-section">
             <ShowRiddle riddle={riddle} />
