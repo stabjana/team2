@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Modal.css';
-import Button from "../Button/Button";
 import ShowRiddle from "../ShowRiddle/ShowRiddle";
 
-const Modal = ({ isOpen, onClose, handleMoveNext, setRewards  }) => {
+const Modal = ({ isOpen, onClose, handleCorrectAnswer  }) => {
     const [riddle, setRiddle] = useState(null);
     const [answers, setAnswers] = useState([]);
-    const [userAnswer, setUserAnswer] = useState("");
 
     useEffect(() => {
         if (isOpen) {
@@ -37,10 +35,9 @@ const Modal = ({ isOpen, onClose, handleMoveNext, setRewards  }) => {
 
     const handleAnswerSubmit = (selectedAnswer) => {
         if (selectedAnswer.trim().toLowerCase() === riddle?.answer?.trim().toLowerCase()) {
-            alert("Correct! You earned a gem.");
+            alert("Correct! You earned a reward.");
             onClose(); // Close the modal
-            setRewards((prevRewards) => [...prevRewards, "Gem"]); // Add gem to rewards
-            handleMoveNext(); // Automatically move the avatar to the next grid
+            handleCorrectAnswer(); // Call the correct answer handler
         } else {
             alert("Incorrect answer. Try again.");
         }
