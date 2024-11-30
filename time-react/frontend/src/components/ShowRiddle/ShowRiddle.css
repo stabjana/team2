@@ -1,0 +1,17 @@
+.show-riddle {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .show-riddle p {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .show-riddle strong {
+    font-weight: bold;
+  }
