@@ -23,7 +23,7 @@ After cloning or forking the repo you have to run
 npm i
 ```
 
-inside the main folder
+inside the main folder to install all dependencies
 
 after that run
 
