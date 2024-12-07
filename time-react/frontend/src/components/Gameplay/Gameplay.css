@@ -171,9 +171,8 @@ main {
 }
 
 .boxForSound {
-  height: 80px;
-  width: 140px;
-  margin: 1rem 0;
+  width: 180px;
+  margin: 0.5srem 0;
   background-color: #f5f5f5;
   border-radius: 5px;
   border: #8168fe 2px solid;

@@ -10,6 +10,7 @@ import lockIcon from "../../assets/icons8-lock-64.png";
 import starIcon from "../../assets/icons-star-64.png";
 import settingsIcon from "../../assets/icons8-settings.svg";
 import Modal from '../Modal/Modal';
+import MusicPlayer from '../MusicPlayer/MusicPlayer';//music player component
 
 const gameplayFields = [116, 73, 200, 48, 212, 106, 191, 52, 165, 82, 223, 140]; // Playable fields
 
@@ -70,6 +71,9 @@ function Gameplay({ onLogOut }) {
           <div id="user" className="user">
             <img src={userPic} alt="little Alien" />
             <h3 id="userName">Username</h3>
+          </div>
+          <div className="boxForSound">
+            <MusicPlayer/>
           </div>
           <div id="gameProgress" className="gameProgress">
             <h3>Progress</h3>
